@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="bg-background-2">
       {/* <Image src="/logo.png" width={40} height={40} alt='logo' className='absolute ml-2 mt-1.5'/> */}
-      <h1 className='absolute items-center p-4 text-xl font-bold'>おんがく</h1>
+      <h1 className='absolute items-center p-3 text-2xl font-bold text-purple text-shadow'>おんがく</h1>
       <ul className="flex items-center justify-end space-x-4 p-4">
         <li>
           <Link href="/">
