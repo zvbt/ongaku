@@ -7,12 +7,10 @@ export default function Home() {
     <main>
       <Navbar />
       <div className="flex flex-col items-center justify-between p-32">
-        <div className="text-3xl">
+        <div className="">
           
-          <Icons.play className="size-10 text-foreground" />
-          <Icons.pause className="size-10 text-foreground" />
-          
-          <h1 className="text-foreground">uwu</h1>
+        
+          <h1 className="text-foreground"> <Icons.play className="size-5 text-foreground" />WEDNESDAY CAMPANELLA - TAMAMO-NO-MAE</h1>
         
         
         </div>
