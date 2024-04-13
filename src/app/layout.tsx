@@ -5,8 +5,8 @@ import "./globals.css";
 const karla = Karla({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Kyo",
-  description: "Music player",
+  title: "おんがく",
+  description: "Discover the best of Jpop on Ongaku - your go-to site for streaming all your favorite Japanese pop music hits. Tune in to the latest tracks, timeless classics, and curated playlists that celebrate the vibrant world of Jpop music.",
 };
 
 export default function RootLayout({
