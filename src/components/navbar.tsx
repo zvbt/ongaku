@@ -2,10 +2,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Icons } from "@/components/ui/icons"
 
+// kanji 音楽
+// furigana おんがく
+// romanji ongaku
+
 const Navbar = () => {
   return (
     <nav className="bg-background-2">
-      <Image src="/logo.png" width={40} height={40} alt='logo' className='absolute ml-2 mt-1.5'/>
+      {/* <Image src="/logo.png" width={40} height={40} alt='logo' className='absolute ml-2 mt-1.5'/> */}
+      <h1 className='absolute items-center p-4 text-xl font-bold'>おんがく</h1>
       <ul className="flex items-center justify-end space-x-4 p-4">
         <li>
           <Link href="/">
