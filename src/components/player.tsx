@@ -4,148 +4,102 @@ import { Icons } from './ui/icons';
 import ProgressBar from './progressbar';
 
 interface MusicPlayerProps {
-  playlistUrl: string;
+  src: string;
 }
 
-const MusicPlayer: React.FC<MusicPlayerProps> = ({ playlistUrl }) => {
-  const [audioUrls, setAudioUrls] = useState<string[]>([]);
-  const [currentSongIndex, setCurrentSongIndex] = useState<number>(0);
-  const [volume, setVolume] = useState<number>(0.5);
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const [currentTime, setCurrentTime] = useState<number>(0);
-  const [totalDuration, setTotalDuration] = useState<number>(0);
-  const sound = useRef<Howl | null>(null);
+const MusicPlayer: React.FC<MusicPlayerProps> = ({ src }) => {
+  const [volume, setVolume] = useState(0.5);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [sound, setSound] = useState<Howl | null>(null);
+  const [showVolumeSlider, setShowVolumeSlider] = useState(false); // State to toggle visibility of volume slider
+  const [showVolumeText, setShowVolumeText] = useState(false); // State to toggle visibility of volume text
+  const inputRef = useRef<HTMLInputElement>(null); // Ref for the input element
 
   useEffect(() => {
-    fetch(playlistUrl)
-      .then(response => response.text())
-      .then(data => {
-        const urls = data
-          .split('\n')
-          .filter(line => line.startsWith('https://'))
-          .map(line => line.trim());
-        setAudioUrls(urls);
-      })
-      .catch(error => {
-        console.error('Error fetching playlist:', error);
-      });
-  }, [playlistUrl]);
-
-  useEffect(() => {
-  if (audioUrls.length > 0) {
-    if (sound.current) {
-      sound.current.unload(); // Unload the current Howl instance
-    }
-    
-    // Initialize a new Howl instance for the new song
-    sound.current = new Howl({
-      src: audioUrls[currentSongIndex],
+    const newSound = new Howl({
+      src: [src],
       html5: true,
+      format: ['mp3'],
       volume: volume,
-      // Update onplay event handler and play function
-onplay: () => {
-  setIsPlaying(true);
-  setTotalDuration(sound.current?.duration() || 0);
-  const updateCurrentTime = () => {
-    if (sound.current?.playing()) {
-      setCurrentTime(sound.current.seek());
-      requestAnimationFrame(updateCurrentTime);
-    }
-  };
-  updateCurrentTime();
-},
-
-
-
+      onplay: () => {
+        setIsPlaying(true);
+      },
       onpause: () => {
         setIsPlaying(false);
       },
       onend: () => {
         setIsPlaying(false);
-        setCurrentTime(0);
-        // Play the next song when the current song ends
-        if (currentSongIndex < audioUrls.length - 1) {
-          playNextSong();
-        }
-      },
-      onstop: () => {
-        setIsPlaying(false);
-        setCurrentTime(0);
-      },
+      }
     });
-  }
-  
-  return () => {
-    if (sound.current) {
-      sound.current.unload();
+
+    setSound(newSound);
+
+    return () => {
+      newSound.unload();
+    };
+  }, [src]); // Removed volume from dependency array
+
+  const togglePlay = () => {
+    if (sound) {
+      if (isPlaying) {
+        sound.pause();
+      } else {
+        sound.play();
+      }
     }
   };
-}, [audioUrls, currentSongIndex]);
-
-
-const play = () => {
-  if (sound.current) {
-    if (!isPlaying) {
-      sound.current.play();
-    } else {
-      sound.current.pause();
-    }
-    setIsPlaying(!isPlaying); // Toggle isPlaying state
-  }
-};
-
-
 
   const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newVolume = parseFloat(event.target.value);
     setVolume(newVolume);
-    if (sound.current) {
-      sound.current.volume(newVolume);
+    if (sound) {
+      sound.volume(newVolume);
     }
   };
 
-const playNextSong = () => {
-  if (sound.current) {
-    sound.current.stop(); // Stop the current song
-  }
-  console.log('Resetting current time to 0');
-  setCurrentTime(0); // Reset current time to 0
-  setCurrentSongIndex(prevIndex => (prevIndex + 1) % audioUrls.length);
-  if (sound.current) {
-    sound.current.play(); // Play the next song
-  }
-};
-
-const playPreviousSong = () => {
-  setCurrentTime(0); // Reset current time to 0
-  setCurrentSongIndex(prevIndex => (prevIndex === 0 ? audioUrls.length - 1 : prevIndex - 1));
-  if (sound.current) {
-    sound.current.play();
-  }
-};
-
+  const calculateVolumeTextPosition = () => {
+    if (inputRef.current) {
+      const inputRect = inputRef.current.getBoundingClientRect();
+      const thumbPosition = (volume - parseFloat(inputRef.current.min)) / (parseFloat(inputRef.current.max) - parseFloat(inputRef.current.min));
+      const thumbLeft = inputRect.left + inputRect.width * thumbPosition;
+      return thumbLeft;
+    }
+    return 0;
+  };
 
   return (
-    <div className='inline-flex items-center'>
-      <button onClick={playPreviousSong}>
-        <Icons.previous className='size-5 text-ctp-text cursor-pointer' />
-      </button>
-      <button onClick={play}>
-        {isPlaying ? <Icons.pause className='size-5 text-ctp-text cursor-pointer' /> : <Icons.play className='size-5 text-ctp-text cursor-pointer' />}
-      </button>
-      <button onClick={playNextSong}>
-        <Icons.next className='size-5 text-ctp-text cursor-pointer mr-2' />
-      </button>
-      <ProgressBar currentTime={currentTime} totalDuration={totalDuration}/>
-      <input
-        type='range'
-        min='0'
-        max='1'
-        step='0.01'
-        value={volume}
-        onChange={handleVolumeChange}
-        className='accent-ctp-mauve w-20 mx-2'
-      />
+    <div>
+      <div>
+        <button onClick={togglePlay}>
+          {isPlaying ? <Icons.pause className='size-5 text-ctp-text cursor-pointer' /> : <Icons.play className='size-5 text-ctp-text cursor-pointer' />}
+        </button>
+        <div className="relative inline-block">
+          <button onClick={() => setShowVolumeSlider(!showVolumeSlider)}>
+            <Icons.speaker className='size-5 text-ctp-text cursor-pointer' />
+          </button>
+          {showVolumeSlider && (
+            <div className="absolute top-0 left-8">
+              <input
+                ref={inputRef}
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value={volume}
+                onChange={handleVolumeChange}
+                onMouseEnter={() => setShowVolumeText(true)} // Show volume text on mouse enter
+                onMouseLeave={() => setShowVolumeText(false)} // Hide volume text on mouse leave
+                className='accent-ctp-mauve'
+              />
+              {showVolumeText && (
+                <span style={{ left: '-30px', top: '-20px' }} className='absolute text-ctp-text text-xs font-semibold'>
+                  {Math.round(volume * 100)}%
+                </span>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

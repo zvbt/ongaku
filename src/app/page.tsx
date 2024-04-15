@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import { Icons } from "@/components/ui/icons";
 import { useState, useEffect } from 'react'
 import Player from "@/components/player";
-
+import StatsComponent from "@/components/stats";
 
 export default function Home() {
    const [isClient, setIsClient] = useState(false)
@@ -13,18 +13,17 @@ export default function Home() {
     setIsClient(true)
   }, [])
   return (
-    <main>
-      {/* white mode = ctp-latte */}
 
+    <main>
       {isClient ? 
 
       <body className="ctp-mocha bg-ctp-mantle">
         <Navbar />
         <div className="flex flex-col items-center justify-between p-32">
           <div className="">
-            <Player playlistUrl="/songs/kpop/kpop.m3u8"/>
-            {/* <h1 className="text-ctp-text"> <Icons.play className="size-5 text-ctp-text cursor-pointer"/>WEDNESDAY CAMPANELLA - TAMAMO NO MAE</h1> */}
+            <Player src="https://192.168.1.32:8000/kpop.mp3"/>
           </div>
+          <StatsComponent/>
         </div>
       </body> 
       : 'Ongaku is loading ...'}

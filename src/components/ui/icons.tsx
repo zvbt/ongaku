@@ -10,7 +10,9 @@ import {
   PlayIcon as play,
   PauseIcon as Pause,
   TrackNextIcon as Next,
-  TrackPreviousIcon as Previous
+  TrackPreviousIcon as Previous,
+  PersonIcon as Person,
+  SpeakerLoudIcon as Speaker
 } from "@radix-ui/react-icons";
 
 interface IconProps {
@@ -35,6 +37,8 @@ export const Icons = {
     </>
   ),
   sun: Sun,
+  person: Person,
+  speaker: Speaker,
   discord: (props: IconProps) => (
     <svg
       width="1em"

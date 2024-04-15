@@ -1,0 +1,194 @@
+{
+  "station": {
+    "id": 2,
+    "name": "Ongaku-kpop",
+    "shortcode": "ongaku-kpop",
+    "description": "",
+    "frontend": "icecast",
+    "backend": "liquidsoap",
+    "timezone": "Europe/Paris",
+    "listen_url": "https://192.168.1.32:8000/kpop.mp3",
+    "url": "",
+    "public_player_url": "https://192.168.1.32/public/ongaku-kpop",
+    "playlist_pls_url": "https://192.168.1.32/public/ongaku-kpop/playlist.pls",
+    "playlist_m3u_url": "https://192.168.1.32/public/ongaku-kpop/playlist.m3u",
+    "is_public": true,
+    "mounts": [
+      {
+        "id": 2,
+        "name": "/radio.mp3 (128kbps MP3)",
+        "url": "https://192.168.1.32:8000/kpop.mp3",
+        "bitrate": 128,
+        "format": "mp3",
+        "listeners": {
+          "total": 1,
+          "unique": 1,
+          "current": 1
+        },
+        "path": "/kpop.mp3",
+        "is_default": true
+      }
+    ],
+    "remotes": [],
+    "hls_enabled": false,
+    "hls_is_default": false,
+    "hls_url": null,
+    "hls_listeners": 0
+  },
+  "listeners": {
+    "total": 1,
+    "unique": 1,
+    "current": 1
+  },
+  "live": {
+    "is_live": false,
+    "streamer_name": "",
+    "broadcast_start": null,
+    "art": null
+  },
+  "now_playing": {
+    "sh_id": 22,
+    "played_at": 1713210914,
+    "duration": 176,
+    "playlist": "kpop",
+    "streamer": "",
+    "is_request": false,
+    "song": {
+      "id": "076c792cefefcee8be679015d05cbc3d",
+      "text": "IVE - After LIKE",
+      "artist": "IVE",
+      "title": "After LIKE",
+      "album": "After LIKE",
+      "genre": "K-Pop Girl Group",
+      "isrc": "QMBZ92254957",
+      "lyrics": "",
+      "art": "https://192.168.1.32/api/station/ongaku-kpop/art/c3e5666dab1a68db4b1bda2e-1713207533.jpg",
+      "custom_fields": []
+    },
+    "elapsed": 17,
+    "remaining": 159
+  },
+  "playing_next": {
+    "cued_at": 1713210909,
+    "played_at": 1713211082,
+    "duration": 182,
+    "playlist": "kpop",
+    "is_request": false,
+    "song": {
+      "id": "9419052b8fd3000d7dc12896126556f3",
+      "text": "Rocket Punch - Ring Ring",
+      "artist": "Rocket Punch",
+      "title": "Ring Ring",
+      "album": "Ring Ring",
+      "genre": "K-Pop",
+      "isrc": "KRA382103732",
+      "lyrics": "[로켓펀치 \"Ring Ring\" 가사]\n\n[Verse 1: Dahyun, Yunkyoung, Juri, Sohee]\n이쁜 척 안 해 (No, no)\n내 맘은 원래 run away\n즐기고 있어 (Oh my)\n둘 중에 먼저 울리는 game (Here we go)\nI'm driving you crazy 불빛이 깜빡\n이리저리 흔들려 나도 몰라\nYeah, I'm picky 키치 한 게 난 좋아\n누구든지 want it, get it 딱 말해\n\n[Pre-Chorus: Suyun, Dahyun]\n나도 원하는 걸 (Don't wanna both)\n두 개의 방은 없어 (Whoever first)\n시간이 아까워\n내 마음이 켜지는 그 순간\n\n[Chorus: Yeonhee, Yunkyoung]\n어지러워 쿵쿵 울려대는 내 맘이\n쟤는 좀 아닌 듯하다면 you hurry\n망설이면 안 되겠어 이대로\nDon't make me sorry\nFun하게 울려줘\nRing, ring the alarm\n\n[Post-Chorus: Yeonhee, Suyun]\nRing, ring, ring the alarm\n잠든 내 머릿속을 ring-a-ring-a-ring\n\n[Verse 2: Juri, Dahyun, *Suyun*, Sohee, Yeonhee]\n싫은 건 아니고 but 아직 부족해\n하루에 수십 번 왔다 갔다 하잖아\n밀어내 또 당겨 아주 재밌는 situation\n*넘을 듯 말 듯 짜릿한 stress* (Here we go)\n진동의 폭을 최대치로 끌어올려\n인내심 test 실컷 했으니, no, no more question\nYeah I'm picky 키치 한 게 난 좋아\n누구든지 want it, get it 딱 말해 (Ha ha)\n\n[Pre-Chorus: Yunkyoung, Juri]\n나도 원하는 걸 (Don't wanna both)\n두 개의 방은 없어 (Whoever first)\n시간이 아까워\n내 마음이 켜지는 그 순간\n\n[Chorus: Suyun, Dahyun]\n어지러워 쿵쿵 울려대는 내 맘이\n쟤는 좀 아닌 듯하다면 you hurry\n망설이면 안 되겠어 이대로\nDon't make me sorry\nFun하게 울려줘\nRing, ring the alarm\n\n[Post-Chorus: Suyun, Yeonhee]\nRing, ring, ring the alarm\n잠든 내 머릿속을 ring-a-ring-a-ring\n\n[Bridge: Dahyun, Sohee, Suyun]\nOoh, 뻔함과 특별함 사이 뭐\n어렵지 않아\n제일 먼저 불러봐, say my name\n이 chillin' 벗어나게 해\nYes, right, yes, right, get ready\n끌리는 대로 가 재밌잖아\nOh-oh, oh\n\n[Chorus: Yeonhee, Yunkyoung, Suyun]\n어지러워 쿵쿵 울려대는 내 맘이 (Ooh, ooh)\n쟤는 좀 아닌 듯하다면 you hurry (You know I'm picky, oh)\n망설이면 안 되겠어 이대로\nDon't make me sorry\nFun하게 울려줘\nRing, ring the alarm\n\n[Post-Chorus: Dahyun, Juri]\nRing, ring, ring the alarm\n잠든 내 머릿속을 ring-a-ring-a-ring",
+      "art": "https://192.168.1.32/api/station/ongaku-kpop/art/80897b189ccd1da16020acd8-1713207724.jpg",
+      "custom_fields": []
+    }
+  },
+  "song_history": [
+    {
+      "sh_id": 21,
+      "played_at": 1713210585,
+      "duration": 331,
+      "playlist": "kpop",
+      "streamer": "",
+      "is_request": false,
+      "song": {
+        "id": "43a0e0f8c9761702ed481a7ae7636d11",
+        "text": "Younha - Kaze",
+        "artist": "Younha",
+        "title": "Kaze",
+        "album": "YOUNHA Studio Live Album 'MINDSET'",
+        "genre": "Korean Pop",
+        "isrc": "KRA382302175",
+        "lyrics": "[ユンナ「風」歌詞]\n\n[Verse 1]\n始まりを告げる街の音\n風が鳴いている\n傷ついたこと\n忘れていくための笑顔もある\n国道を急ぐ車から\nいつかのリフレイン\n君は今何してるのかな\nみんな life goes on\n\n[Pre-Chorus]\nありふれても ありのままの\n言葉を信じたいように\nうつむいても 行かなくちゃね\n後悔さえ抱えたまま\n心に抱きしめた yesterday\n\n[Chorus]\n誰も触れない 記憶の風\n変わり続ける街に吹いて\nそっと手を振るんだよ\n叶わず消えた願いたちへ oh-oh\n溢れてる人込みの中で\nどんな明日が待っているのたろう\nそしてこの季節も止まらない\n\n[Verse 2]\n懐かしい声が気付かせた\nいつかのリグレット\n少しだけ強くなれたかな\nこんな毎日で\n\n[Instrumental Break]\n\n[Pre-Chorus]\n変わることに 怯えてたら\n昨日は夢を追い出した\n涙に意味 見つけたなら\n微笑むこともまた知って\n輝き始めるよ yesterday\n\n[Chorus]\n約束で埋まった日々の中に\n幸せはあるって思えたのに\nきっと何もかもが\nそのままではいられなくて oh-oh\n伝え切れなかった想いはなぜ\nいつまでも残ってしまうのだろう\nきっと時間だけが戻らない\n\n[Bridge]\nAhh, ahh-ahh-ahh\n\n[Chorus]\n誰も触れない 記憶の風\n変わり続ける街に吹いて\nそっと手を振るんだよ\n叶わず消えた願いたちへ oh-oh\n溢れてる人込みの中で\nどんな明日が待っているのだろう\nそしてこの季節も止まらない",
+        "art": "https://192.168.1.32/api/station/ongaku-kpop/art/1f20ab0cdef3ae19f987e06c-1713207676.jpg",
+        "custom_fields": []
+      }
+    },
+    {
+      "sh_id": 20,
+      "played_at": 1713210403,
+      "duration": 184,
+      "playlist": "kpop",
+      "streamer": "",
+      "is_request": false,
+      "song": {
+        "id": "09522ce3ae5562b90ae96b76b8b14d92",
+        "text": "PIXY - KARMA",
+        "artist": "PIXY",
+        "title": "KARMA",
+        "album": "CHOSEN KARMA",
+        "genre": "K-Pop Girl Group",
+        "isrc": "KRB472300236",
+        "lyrics": "[픽시 \"KARMA\" 가사]\n\n[Intro: All, Dajeong]\n(Hypocrite, now face your fate)\nUh\nIs this 911?\nThis is PIXY\nCallin'\n\n[Verse 1: Dia, Dia & Lola, Lola, Sua]\nRecline, recline\nI got your life on the line\n머리끝부터 발끝까지 맞춰\n내 손짓에 네 숨이 멈춰\nDon't cry, don't cry\n시작할게 너 ready or not (Uh-huh)\n이미 난 in your mind\nAlready know all your plans\n넌 내 손끝에 marionette\n\n[Pre-Chorus: Dia, Rinji, Dajeong, Sua]\nWow\n빈틈없이 빛나 like a flawless diamond\n이제부터 시작되는 완벽한 game\n알기 쉽게 말해줄게 gotta come play\nWell\n다 정해진 story 너의 dead end\nRemember me? 한 번 더 말해줄게\nIf you're bad then you can call me villain\n\n[Chorus: Dia, Dajeong, Lola]\nI'll decide your fate, let's flip a coin\nOh, 말해봐 heads or tails (Ah-ah)\n네 운명을 정해줄게 (Oh yeah)\nI'll be your Μοῖραι\n다시 한번 더 let's flip a coin (Ah, flip-flip)\nIt don't matter, heads or tails (Ooh)\n모두 정해져있지 (Uh)\nJust toying with you\nFace your karma, time to flip a coin\n\n[Verse 2: Rinji, Lola]\n기억에 새긴 실루엣\nThey all wonder who I am (Ha)\n어린지 몰라도 충분해\n널 미쳐 날뛰게 하기엔\nS-O-S, O-S, O-S\n머리에 윙윙 울리게 (Ah, ah, ah, ah)\nBling a ring, a ring, a ling\n너 깜짝 놀라-놀라-놀라게\n\n[Pre-Chorus: Sua, Dia, Rinji, Dajeong]\nWow\n거짓 순수 아름답게 맺을 결말\n이제부터 말해줄게 그게 뭔지\nSpoiler alert 너만 몰랐던 너의 ending\nWell (Yeah)\n달아나도 no way 난 너의 앞에\n이젠 내가 누군지 보여줄게\nIf you're bad then you can call me villain\n\n[Chorus: Lola, Rinji, Sua]\nI'll decide your fate, let's flip a coin\nOh, 말해봐 heads or tails (Ah)\n네 운명을 정해줄게 (Oh)\nI'll be your Μοῖραι (Ah)\n다시 한번 더 let's flip a coin (Flip, flip, flip)\nIt don't matter, heads or tails (Ooh)\n모두 정해져있지 (Eh)\nJust toying with you\nFace your karma, time to flip a-\n\n[Bridge: Dia, Dajeong, Lola]\nCoin 뒤집혀 버린 너와 나 사이\n선과 악의 그 경계\n내 손안에 놓인 너 이제 남겨진 건\n단 하나\nKarma is a bitch\n\n[Interlude: Lola, Sua]\nTen (Da-ra-ra-da-da-da-da)\nNine (Da-ra-ra-da-da-da-da)\nEight, seven (Da-ra-ra-da-da-da-da)\nSix, five, four, three, two, one (Da-da-da-da-da-da)\nMm-mm\n\n[Outro: All]\nRun, run if you can\n아슬아슬하게 따라잡히네\n'Cause I gotta-gotta break into your plans\n재미없으니 이젠 내가 끝내\nRun, run if you can (Oh woah, ooh woah)\n이미 내가 이긴 나를 위한 game (Ooh woah, ooh woah, oh-oh)\n멀리 뛰어봤자 넌 내 손안에\n바로 뒤에 나야 better watch your back",
+        "art": "https://192.168.1.32/api/station/ongaku-kpop/art/5c47b576d8139ca9377ce43f-1713207423.jpg",
+        "custom_fields": []
+      }
+    },
+    {
+      "sh_id": 19,
+      "played_at": 1713210324,
+      "duration": 82,
+      "playlist": "kpop",
+      "streamer": "",
+      "is_request": false,
+      "song": {
+        "id": "3d60f2c5c3b47c3c1951752d235f6876",
+        "text": "MAMAMOO - 4season (Outro)",
+        "artist": "MAMAMOO",
+        "title": "4season (Outro)",
+        "album": "White Wind",
+        "genre": "K-Pop",
+        "isrc": "KRA381900688",
+        "lyrics": "Sunrise 눈이 부시게 all day\nEvery night 달빛도 은은하게\n향기로운 바람이 불어와 (후!)\n꽃잎이 날려\nA better day for a picnic\n같이 놀러 갈래 이번엔\n둘만의 시간을 보내\n\n하나씩 하나씩\n기분 좋은 기억을 쌓고 걸어가\n같이 걸어가\n\n너와\n너 너 너와 나\n너와 (너와)\n너와 나 함께\n\n너와 나의 하루가\n너와 나의 매 순간\n너와 나의 계절이 채워져",
+        "art": "https://192.168.1.32/api/station/ongaku-kpop/art/6a4ad5870d1f58a88bfa3b27-1713207810.jpg",
+        "custom_fields": []
+      }
+    },
+    {
+      "sh_id": 18,
+      "played_at": 1713210123,
+      "duration": 203,
+      "playlist": "kpop",
+      "streamer": "",
+      "is_request": false,
+      "song": {
+        "id": "fe2173c02f3ebab73c9b58adc997b0ae",
+        "text": "Red Velvet - Sunny Side Up!",
+        "artist": "Red Velvet",
+        "title": "Sunny Side Up!",
+        "album": "'The ReVe Festival' Finale",
+        "genre": "K-Pop",
+        "isrc": "KRA301900610",
+        "lyrics": "[레드벨벳 \"Sunny Side Up!\" 가사]\n\n[Intro: Joy]\nSunny side up\nSunny side up, up\nSunny side up\nOh, yeah, oh, yeah\n\n[Verse 1: Wendy & Irene]\n아 그 눈빛은 저리 치워 둘래\n어디서 그리 어른처럼 굴래\n좀 온도차가 있어 우리 사이엔\n그 사이에 I was down, down, down\n난 겁이 나 (나) 자꾸만 난 겁이 나 (나) Oh\n다 타버릴까 (다) 다 버릴까 (다)\n솔직히, 솔직히 홀리지 난\n욕심이 나 (Oh, no)\nBut 뭔가 좀 우리 다운, 다운, 다운\n\n[Pre-Chorus]\n날 보는 그 눈\n난 자꾸만 또 입이 타 (입이 타)\n가만있어도 널 놓칠까 난 애가 타\n(Woohoo, ooh-la-la)\n\n[Chorus]\nSunny side up\n말처럼 쉽진 않대\n서두르단 깨질 걸\n(Woohoo, ooh-la-la)\n재미없던 매일이 이젠 Sunday\n이미 너는 내 태양인 걸\n잠깐만, 잠깐만, 또 자꾸만\n내 맘만, 내 맘만\n다 타들어가\nSunny side up\n맘처럼 쉽겐 안 돼\n우릴 깨뜨리긴 싫은 걸\n(Woohoo, ooh-la-la)\n\n[Verse 2]\n넌 너무 빨라, I need time to catch up\n안 옮을래 네 급한 맘의 virus (Uh)\n문제가 있어 우리 생각 차이에 (에)\n그 차이에 (에)\nI was down, down, down\n\n[Pre-Chorus]\n날 보는 그 눈\n난 자꾸만 또 입이 타 (Oh yeah, oh yeah)\n가만있어도 넌 뜨거워 난 애가 타\n(Woohoo, ooh-la-la)\n\n[Chorus]\nSunny side up\n말처럼 쉽진 않대\n서두르단 깨질 걸\n(Woohoo, ooh-la-la)\n재미없던 매일이 이젠 Sunday\n이미 너는 내 태양인 걸 (Sunny side up)\n잠깐만, 잠깐만 (자꾸만)\n또 자꾸만 내 맘만, 내 맘만\n다 타들어가\nSunny side up\n맘처럼 쉽겐 안 돼\n우릴 깨뜨리긴 싫은 걸\n(Sunny side up, sunny)\n\n[Bridge]\n잘못했단, game over 이지 (이지)\n이대로도 좋아 난 아직 (아직)\n날 흔들지 마 (Oh)\n다 깨질지 몰라 (Oh-oh)\nDon't make my mind all scrambled up\n\n[Refrain]\nSunny side up\nSunny side up, up\nSunny side up\nOh, yeah, oh, yeah\n\n[Chorus]\nSunny side up\n말처럼 쉽진 않대\n서두르단 깨질 걸\n(Woohoo, ooh-la-la)\n재미없던 매일이 이젠 Sunday\n이미 너는 내 태양인 걸\n잠깐만, 잠깐만 (Oh-oh) 꾹 참았던\n내 맘 다 내 맘 다\n다 터뜨릴까\nSunny side up\n좀 기다리면 어때\n우리의 태양이 곧 뜰 거야\n\n[Outro]\nSunny side up",
+        "art": "https://192.168.1.32/api/station/ongaku-kpop/art/d4ae768fad75074adcaa3280-1713207986.jpg",
+        "custom_fields": []
+      }
+    },
+    {
+      "sh_id": 17,
+      "played_at": 1713209927,
+      "duration": 199,
+      "playlist": "kpop",
+      "streamer": "",
+      "is_request": false,
+      "song": {
+        "id": "acb1df6637af579c19511ae679b0d198",
+        "text": "TWICE - MORE & MORE",
+        "artist": "TWICE",
+        "title": "MORE & MORE",
+        "album": "MORE & MORE",
+        "genre": "K-Pop",
+        "isrc": "US5TA2000050",
+        "lyrics": "[트와이스 \"MORE & MORE\" 가사]\n\n[Verse 1: Nayeon, Mina]\nI know I want it\n입에 바른 소린 이제 그만할게\n'Cause I deserve it (Deserve it)\n혹시 잠깐 내가 미워지더라도 걱정 안 할게\n'Cause I know you (I know you)\n\n[Refrain: Tzuyu, Momo]\n내 눈을 자꾸 피해봐 (Hey)\n네 맘을 자꾸 숨겨봐 (Hey)\n나에게서 도망쳐봐, no, no\n감았던 눈을 떴을 때 (Hey)\n문득 내가 떠오를 때 (Hey)\nYou are gonna be mine again, yeah\n\n[Pre-Chorus: Sana, Dahyun, Chaeyoung, Jihyo, (Jeongyeon), (Nayeon)]\nYou're gonna say more, more, more, more, more, and more\n멈추지 못해 more, more, more, and more\n그러니 한 번 더\nI wanna have more, more, more, more, more, and more\n(멈추기 싫어 more, more, more, and more)\n(그러니 한 번 더)\nMore\n\n[Chorus: Dahyun, Tzuyu, Mina, Momo, (All)]\n멈추지를 못해\n(More and more)\n그러니 한 번 더 더\n멈추기가 싫어\n(More and more)\n그러니 한 번 더\n\n[Verse 2: Jeongyeon, Chaeyoung]\nDo you feel me?\n니가 날 위한 사람이라고 믿니?\nOnly for me (Only for me)\n간지러운 말은 굳이 하지 않아도 넌\n'Cause you know me, you know me\n\n[Refrain: Sana, Jihyo]\n네 귀를 자꾸 막아도\n나를 멀리 밀어내도\n나에게서 멀어져도 (저 멀리), no, no\n내가 다시 널 부르면\n나의 목소릴 들으면\nYou are gonna be mine again\nYeah, 한 번 더\n\n[Pre-Chorus: Sana, Dahyun, Chaeyoung, Jihyo, (Jeongyeon), {Nayeon}]\nYou're gonna say more, more, more, more, more, and more\n멈추지 못해 more, more, more, and more\n그러니 한 번 더\nI wanna have more, more, more, more, more, and more\n(멈추기 싫어 more, more, more, and more)\n(그러니 한 번 더)\nMore\n\n[Chorus: Dahyun, Tzuyu, Mina, (All)]\n멈추지를 못해\n(More and more)\n그러니 한 번 더 더\n멈추기가 싫어\n(More and more)\n그러니 한 번 더\n\n[Break]\n(More)\n(More)\n\n[Bridge: Dahyun, Chaeyoung, Nayeon]\n난 원래 욕심쟁이 몰랐다면 미안\n사과는 미리 할게 'cause I want you more, more\n의견은 필요 없어 훔칠 거야 네 맘\n내게 홀리게 될걸 you can't say no, no\n난 도둑고양이 오늘만은 널\n꼭 잡으러 왔으니까 딱 기다려 너\n멀리 가지 말고 다시 내게 come, come\nYeah 한 번 더\n(More)\n\n[Chorus: Chaeyoung, Tzuyu, Mina, Nayeon, (All)]\n멈추지를 못해 (You're gonna say)\n(More and more)\n그러니 한 번 더 더 (그러니 한 번 더)\n멈추기가 싫어 (More and more)\n(More and more)\n그러니 한 번 더\n(More)",
+        "art": "https://192.168.1.32/api/station/ongaku-kpop/art/741a5f647d0371f0136e77d2-1713207757.jpg",
+        "custom_fields": []
+      }
+    }
+  ],
+  "is_online": true,
+  "cache": null
+}
