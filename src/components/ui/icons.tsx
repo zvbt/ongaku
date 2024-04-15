@@ -8,7 +8,9 @@ import {
   StarIcon as Star,
   SunIcon as Sun,
   PlayIcon as play,
-  PauseIcon as Pause
+  PauseIcon as Pause,
+  TrackNextIcon as Next,
+  TrackPreviousIcon as Previous
 } from "@radix-ui/react-icons";
 
 interface IconProps {
@@ -130,6 +132,8 @@ export const Icons = {
   star: Star,
   play: play,
   pause: Pause,
+  next: Next,
+  previous: Previous,
   send: (props: IconProps) => {
     return (
       <svg
