@@ -34,7 +34,7 @@ const calculateCurrentTime = (playedAt: number, duration: number) => {
   const fetchData = async () => {
   try {
     const timestamp = Date.now(); 
-    const url = `https://192.168.1.32/api/nowplaying/Ongaku-kpop?_=${timestamp}`;
+    const url = `http://192.168.1.32:5566/api/nowplaying/Ongaku-kpop?_=${timestamp}`;
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error('Failed to fetch data');
