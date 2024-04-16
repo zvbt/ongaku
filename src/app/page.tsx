@@ -12,22 +12,33 @@ export default function Home() {
   useEffect(() => {
     setIsClient(true)
   }, [])
-  return (
-
-    <main>
-      {isClient ? 
-
-      <body className="ctp-mocha bg-ctp-mantle">
-        <Navbar />
-        <div className="flex flex-col items-center justify-between p-32">
-          <div className="">
-            <Player src="https://192.168.1.32:8000/kpop.mp3"/>
-          </div>
-          <StatsComponent/>
-        </div>
-      </body> 
-      : 'Ongaku is loading ...'}
-      
-    </main>
-  );
+  
+    return (
+        <main>
+            {isClient ? (
+                <div className="ctp-mocha relative h-screen bg-ctp-mantle">
+                    <Navbar />
+                    {/* <video
+                        src="https://r2.e-z.host/7ed0180f-b228-49a7-be1e-0183c1938777/8n981gr2.mp4"
+                        autoPlay={true}
+                        loop={true}
+                        controls={false}
+                        muted={true}
+                        className='absolute inset-0 w-full h-full object-cover z-0 pointer-events-none'
+                        draggable={false}
+                    ></video> */}
+                    <div className="flex flex-col items-center justify-center absolute top-0 left-0 w-full h-full z-10">
+                        <div className="bg-ctp-crust bg-opacity-90 py-5 px-10 w-[85%] rounded-xl" id="bar">
+                            <div className="">
+                                <Player src="https://stream.zvbt.space/kpop.mp3" />
+                            </div>
+                            <StatsComponent />
+                        </div>
+                    </div>
+                </div>
+            ) : (
+                'Ongaku is loading ...'
+            )}
+        </main>
+    );
 }

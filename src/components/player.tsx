@@ -68,14 +68,14 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ src }) => {
   };
 
   return (
-    <div>
+    <div className='z-10'>
       <div>
         <button onClick={togglePlay}>
           {isPlaying ? <Icons.pause className='size-5 text-ctp-text cursor-pointer' /> : <Icons.play className='size-5 text-ctp-text cursor-pointer' />}
         </button>
         <div className="relative inline-block">
           <button onClick={() => setShowVolumeSlider(!showVolumeSlider)}>
-            <Icons.speaker className='size-5 text-ctp-text cursor-pointer' />
+            <Icons.speaker className='size-5 text-ctp-text cursor-pointer ml-2' />
           </button>
           {showVolumeSlider && (
             <div className="absolute top-0 left-8">
