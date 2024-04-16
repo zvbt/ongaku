@@ -12,7 +12,6 @@ const handleClick = () => {
         body.classList.remove("ctp-latte");
         body.classList.add("ctp-mocha");
     } else {
-        // Default behavior if neither class is present
         body.classList.add("ctp-mocha");
     }
 };
