@@ -11,9 +11,25 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ src }) => {
   const [volume, setVolume] = useState(0.5);
   const [isPlaying, setIsPlaying] = useState(false);
   const [sound, setSound] = useState<Howl | null>(null);
-  const [showVolumeSlider, setShowVolumeSlider] = useState(false); // State to toggle visibility of volume slider
-  const [showVolumeText, setShowVolumeText] = useState(false); // State to toggle visibility of volume text
-  const inputRef = useRef<HTMLInputElement>(null); // Ref for the input element
+  const [showVolumeSlider, setShowVolumeSlider] = useState(false);
+  const [showVolumeText, setShowVolumeText] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+
+let audioContext: AudioContext | null = null;
+
+const initAudioContext = () => {
+  if ((window as any).AudioContext || (window as any).webkitAudioContext) {
+    if (!audioContext) {
+      audioContext = new ((window as any).AudioContext || (window as any).webkitAudioContext)();
+    }
+    if (audioContext?.state === 'suspended') {
+      audioContext.resume();
+    }
+  } else {
+    console.error('AudioContext is not supported in this browser');
+  }
+};
 
   useEffect(() => {
     const newSound = new Howl({
@@ -37,13 +53,14 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ src }) => {
     return () => {
       newSound.unload();
     };
-  }, [src]); // Removed volume from dependency array
+  }, [src]);
 
   const togglePlay = () => {
     if (sound) {
       if (isPlaying) {
         sound.pause();
       } else {
+        initAudioContext();
         sound.play();
       }
     }
@@ -87,8 +104,8 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ src }) => {
                 step="0.01"
                 value={volume}
                 onChange={handleVolumeChange}
-                onMouseEnter={() => setShowVolumeText(true)} // Show volume text on mouse enter
-                onMouseLeave={() => setShowVolumeText(false)} // Hide volume text on mouse leave
+                onMouseEnter={() => setShowVolumeText(true)}
+                onMouseLeave={() => setShowVolumeText(false)}
                 className='accent-ctp-mauve'
               />
               {showVolumeText && (
