@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import { Icons } from "@/components/ui/icons";
 import Link from 'next/link';
 
-const handleClick = () => {
+const darkmode = () => {
     const body = document.body;
     
     if (body.classList.contains("ctp-mocha")) {
@@ -23,22 +24,22 @@ const Navbar = () => {
             <h1 className='absolute items-center p-3 text-2xl font-bold bg-gradient-to-r from-ctp-pink to-ctp-mauve bg-clip-text text-transparent text-shadow'>おんがく</h1>
             <ul className="flex items-center justify-end space-x-4 p-4">
                 <li>
-                    <Link href="/">
+                    <Link href="/" prefetch={false}>
                         <div className="text-ctp-text cursor-pointer hover:underline hover:underline-offset-8">Home</div>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/" prefetch={false}>
                         <div className="text-ctp-text cursor-pointer hover:underline hover:underline-offset-8">Kpop</div>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/About">
+                    <Link href="/about" prefetch={false}>
                         <div className="text-ctp-text cursor-pointer hover:underline hover:underline-offset-8">About</div>
                     </Link>
                 </li>
                 <li>
-                    <div className="cursor-pointer" onClick={handleClick}><Icons.moon className='fill-current text-ctp-text' /></div>
+                    <div className="cursor-pointer" onClick={darkmode}><Icons.moon className='fill-current text-ctp-text' /></div>
                 </li>
             </ul>
             <style jsx>{`
