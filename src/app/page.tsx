@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import { Icons } from "@/components/ui/icons";
 import { useState, useEffect } from 'react'
 import Player from "@/components/player";
-import StatsComponent from "@/components/stats";
+import StatsComponent from "@/components/kpop-stats";
 
 export default function Home() {
    const [isClient, setIsClient] = useState(false)
@@ -15,19 +15,12 @@ export default function Home() {
   
     return (
         <main>
+            <link rel="shortcut icon" href="/favicon.png" type="image/x-png" />
             {isClient ? (
                 <div className="ctp-mocha relative h-screen bg-ctp-mantle">
                     <Navbar />
-                    <video
-                        src="https://r2.e-z.host/7ed0180f-b228-49a7-be1e-0183c1938777/24r2dbuc.mp4"
-                        autoPlay={true}
-                        loop={true}
-                        controls={false}
-                        muted={true}
-                        className='absolute w-full h-full object-fill z-0 pointer-events-none blur-[4px]'
-                        draggable={false}
-                    ></video>
-                    {/* <Image src='https://r2.e-z.host/7ed0180f-b228-49a7-be1e-0183c1938777/zcvd26cl.jpg' width={1920} height={1080} className='absolute inset-0 w-full h-full object-cover z-0 pointer-events-none' draggable={false} alt='bg' quality={100}/> */}
+                    <Image src='https://r2.e-z.host/7ed0180f-b228-49a7-be1e-0183c1938777/06uh5y7g.jpg' width={1920} height={1080} className='absolute inset-0 w-full h-full object-cover z-0 pointer-events-none blur-[5px]' draggable={false} alt='bg' quality={100}/>
+                    <div className="absolute inset-0 bg-[#181825] bg-opacity-80"></div>
                     <div className="flex flex-col items-center justify-center absolute top-0 left-0 w-full h-full z-10">
                         <div className="bg-ctp-crust bg-opacity-90 py-5 px-10 w-[85%] rounded-xl" id="bar">
                             <div className="">
