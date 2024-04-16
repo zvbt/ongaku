@@ -109,7 +109,7 @@ const initAudioContext = () => {
                 className='accent-ctp-mauve'
               />
               {showVolumeText && (
-                <span style={{ left: '-30px', top: '-20px' }} className='absolute text-ctp-text text-xs font-semibold'>
+                <span style={{ left: '-23px', top: '-15px' }} className='absolute text-ctp-text text-xs font-semibold'>
                   {Math.round(volume * 100)}%
                 </span>
               )}
