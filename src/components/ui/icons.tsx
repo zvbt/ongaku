@@ -12,7 +12,8 @@ import {
   TrackNextIcon as Next,
   TrackPreviousIcon as Previous,
   PersonIcon as Person,
-  SpeakerLoudIcon as Speaker
+  SpeakerLoudIcon as Speaker,
+  InfoCircledIcon as Info
 } from "@radix-ui/react-icons";
 
 interface IconProps {
@@ -39,6 +40,7 @@ export const Icons = {
   sun: Sun,
   person: Person,
   speaker: Speaker,
+  info: Info,
   discord: (props: IconProps) => (
     <svg
       width="1em"
