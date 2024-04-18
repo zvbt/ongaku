@@ -6,7 +6,7 @@ const karla = Karla({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "おんがく",
-  description: "Discover the best of Jpop and Kpop on Ongaku your go-to platform for streaming all your favorite Japanese and Korean pop music hits. Dive into the latest tracks, timeless classics, and carefully curated playlists that celebrate the vibrant world of Jpop music.",
+  description: "Discover the best of Jpop and Kpop on Ongaku your go-to platform for streaming all your favorite Japanese and Korean pop music hits. Dive into the latest tracks, timeless classics, and carefully curated playlists that celebrate the vibrant world of Jpop and Kpop music.",
 };
 
 export default function RootLayout({
