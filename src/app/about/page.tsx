@@ -18,41 +18,50 @@ export default function Page() {
                 <div className="ctp-mocha relative h-screen bg-ctp-mantle">
                     <Navbar />
                     <Image src='https://r2.e-z.host/7ed0180f-b228-49a7-be1e-0183c1938777/06uh5y7g.jpg' width={1920} height={1080} className='fixed inset-0 w-full h-full object-cover z-0 pointer-events-none blur-[5px]' draggable={false} alt='bg' quality={100}/>
-                    <div className="absolute inset-0 bg-[#181825] bg-opacity-80"></div>
-                    <div className="flex flex-col items-center justify-center absolute top-0 left-0 w-full h-full z-10">
-                        <div className="bg-ctp-crust bg-opacity-90 py-5 px-10 w-[85%] rounded-xl my-5" id="bar">
+                    <div className="fixed inset-0 bg-[#181825] bg-opacity-80"></div>
+                    <div className="flex flex-col items-center justify-center absolute top-[30%] left-0 w-full h-full z-10  sm:top-[15%] lg:top-[10%] xl:top-[5%] 2xl:top-[0%]">
+                        <h1 className='text-ctp-text font-bold text-5xl pt-10'>About</h1>
+                        <div className="bg-ctp-crust bg-opacity-90 py-5 px-10 w-[85%] rounded-xl my-2" id="bar">
                             <div className="text-ctp-text ">
-                                <p>Hello, I am Cyadine. I made this website to learn a little more about Next.js. I don't make any money from it, and I never intend to. If you want to remove any song, contact me via email at <a href="mailto:cyadine@skiff.com" className="text-ctp-mauve">cyadine@skiff.com</a>.</p>
+                                <p>Hello i'm Cyadine, and I build this website to explore Next.js. I've been wanting to create a project like this for a few months now!</p>
+                                <p>This is a non-profit project dedicated to helping you discover amazing K-Pop and J-Pop music! If you have any concerns about a song, please don't hesitate to email me at <a href="mailto:cyadine@skiff.com" className="text-ctp-mauve">cyadine@skiff.com</a> for quick removal.</p>
                             </div>
                         </div>
+                        <h1 className='text-ctp-text font-bold text-5xl pt-10'>Q&A</h1>
 
-                        <div className="bg-ctp-crust bg-opacity-90 py-5 px-10 w-[85%] rounded-xl my-5" id="bar">
-                            <div className="text-ctp-text ">
-                                <p>If you encounter any bugs or you want to requests a song, please don't hesitate to open an issue on <a href="https://github.com/zvbt/ongaku" className="text-ctp-mauve">GitHub</a> or contact me via email at <a href="mailto:ongaku@zvbt.space" className="text-ctp-mauve">ongaku@zvbt.space</a>.</p>                            </div>
-                        </div>
+                        <div className="bg-ctp-crust bg-opacity-90 py-5 px-10 w-[85%] rounded-xl my-2" id="bar">
+                            <div className="text-ctp-text">
+                                <div className='pb-4'>
+                                    <p className='font-bold'>Where does the name Ongaku come from?</p>
+                                    <li >Ongaku means music in Japanese. I've been a fan of Asian culture for a few years now, and I thought it would be fun to call it Ongaku.</li>
+                                </div>
+                                <div className='pb-4'>
+                                    <p className='font-bold'>I found a bug, how can i report it?</p>
+                                    <li>Don't hesitate to open an issue on <a href="https://github.com/zvbt/ongaku" className="text-ctp-mauve">GitHub</a> or contact me via email at <a href="mailto:ongaku@zvbt.space" className="text-ctp-mauve">ongaku@zvbt.space</a>.</li>
+                                </div>
+                                <div className='pb-4'>
+                                    <p className='font-bold'>I would like to request a song. How to do it?</p>
+                                    <li>You can create an issue on <a href="https://github.com/zvbt/ongaku" className="text-ctp-mauve">GitHub</a> with your song requests.  If possible, please include links to the songs on YouTube or Spotify for easy reference.</li>
+                                </div>
+                                <div className='pb-4'>
+                                    <p className='font-bold'>When the playlist are updated?</p>
+                                    <div className='flex items-center'>
+                                        <li className='pr-2'>Playlists are updated every Sunday at 10PM CEST or in </li>
+                                        <CountdownTimer />
+                                    </div>
+                                </div>
 
-                        <div className="bg-ctp-crust bg-opacity-90 py-5 px-10 w-[85%] rounded-xl my-5" id="bar">
-                            <div className="text-ctp-text ">
-                                <p>Where does the name Ongaku come from? This word means 'music' in Japanese. I've been a fan of Asian culture for a few years now, and I thought it would be fun to call it Ongaku.</p>
+                                <div className='pb-4'>
+                                    <p className='font-bold'>What is under the hood?</p>
+                                    <li className="list-disc"><a href="https://nextjs.org/" className="text-ctp-mauve underline">Next.js:</a> Used to build this webapp</li>
+                                    <li className="list-disc"><a href="https://www.radix-ui.com/" className="text-ctp-mauve underline">Radix UI:</a> My favorite icons library.</li>
+                                    <li className="list-disc"><a href="https://howlerjs.com/" className="text-ctp-mauve underline">Howler.js:</a> Audio library.</li>
+                                    <li className="list-disc"><a href="https://tailwindcss.com/" className="text-ctp-mauve underline">Tailwind CSS:</a> My favorite css framework.</li>
+                                    <li className="list-disc"><a href="https://catppuccin.com/" className="text-ctp-mauve underline">Catppuccin:</a> Color palette of the site.</li>
+                                    <li className="list-disc"><a href="https://icecast.org/" className="text-ctp-mauve underline">Icecast:</a> Steaming server.</li>
+                                </div>
                             </div>
                         </div>
-
-                        <div className="bg-ctp-crust bg-opacity-90 py-5 px-10 w-[85%] rounded-xl my-5" id="bar">
-                            <div className="text-ctp-text my-5">
-                                <p className="font-extrabold">What is under the hood.</p>
-                                    <ul className="mt-5">
-                                        <li className="list-disc"><a href="https://nextjs.org/" className="text-ctp-mauve underline font-semibold">Next.js</a> is a React framework used for building server-side rendered React applications. It simplifies the process of creating dynamic web pages and provides features like automatic code splitting, routing, and server-side rendering.</li>
-                                        <li className="list-disc"><a href="https://www.radix-ui.com/" className="text-ctp-mauve underline font-semibold">Radix UI</a> is an open-source library for building user interfaces (UI) for web applications. It provides a collection of pre-built, foundational UI components that you can use as building blocks for your web app.</li>
-                                        <li className="list-disc"><a href="https://howlerjs.com/" className="text-ctp-mauve underline font-semibold">Howler.js</a> is a JavaScript library used for managing audio playback in web applications. It simplifies tasks such as loading, playing, and controlling audio files, making it ideal for implementing audio players and other multimedia features.</li>
-                                        <li className="list-disc"><a href="https://tailwindcss.com/" className="text-ctp-mauve underline font-semibold">Tailwind CSS</a> is a utility-first CSS framework that provides a set of pre-built utility classes for styling HTML elements. It allows developers to rapidly build custom designs without writing custom CSS by hand, promoting a more modular and maintainable approach to styling.</li>
-                                        <li className="list-disc"><a href="https://catppuccin.com/" className="text-ctp-mauve underline font-semibold">Catppuccin</a> is a popular, community-driven theme designed for coders, designers, and anyone who spends a lot of time on their computer.</li>
-                                        <li className="list-disc"><a href="https://icecast.org/" className="text-ctp-mauve underline font-semibold">Icecast</a> is a streaming server that allows you to broadcast audio and video data to listeners or viewers.</li>
-                                    </ul>
-                            </div>
-                        </div>
-   
-                        <CountdownTimer />
-
                     </div>
                 </div>
             ) : (

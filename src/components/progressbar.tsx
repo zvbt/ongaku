@@ -21,7 +21,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ currentTime, totalDuration })
     <div className='flex flex-col items-center pr-0'>
       <div className='flex w-full text-ctp-text font-semibold text-xs'>
         <p className='absolute ml-0 sm:ml-0'>{formattedCurrentTime}</p>
-        <p className='pl-[97.5%]'>{formattedTotalDuration}</p>
+        <p className=' sm:pl-[93%] lg:pl-[95%] xl:pl-[96.5%] 2xl:pl-[97%] pl-[85%]'>{formattedTotalDuration}</p>
       </div>
       <div className='w-full h-[15px] border border-solid border-ctp-surface0 rounded overflow-hidden'>
         <div

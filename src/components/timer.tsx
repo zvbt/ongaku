@@ -8,7 +8,7 @@ function CountdownTimer() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://worldtimeapi.org/api/timezone/Europe/Paris');
+                const response = await axios.get('https://worldtimeapi.org/api/timezone/Europe/Paris');
                 const currentTime = new Date(response.data.utc_datetime);
                 setTimeRemaining(calculateTimeRemaining(currentTime));
             } catch (error) {
@@ -51,15 +51,7 @@ function CountdownTimer() {
     }
 
     return (
-        <div className="bg-ctp-crust bg-opacity-90 py-5 px-10 w-[85%] rounded-xl my-5" id="bar">
-            <div className="text-ctp-text flex items-center">
-                <Icons.info className="text-ctp-mauve size-5 mr-2" />
-                <p className="m-0 mr-1">Playlist update every Sunday at 10PM CEST or in </p>
-                <p className="m-0">
-                    {timeRemaining.days}d {timeRemaining.hours}h {timeRemaining.minutes}m {timeRemaining.seconds}s
-                </p>
-            </div>
-        </div>
+            <p className="text-ctp-text">{timeRemaining.days}d {timeRemaining.hours}h {timeRemaining.minutes}m {timeRemaining.seconds}s</p>
     );
 }
 
