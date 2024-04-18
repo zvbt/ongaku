@@ -42,3 +42,5 @@ bun.lockb
 
 *.mp3
 *.m3u8
+
+build.sh
