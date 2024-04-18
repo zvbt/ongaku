@@ -56,6 +56,7 @@ const calculateCurrentTime = (playedAt: number, duration: number) => {
     <div className='relative z-10'>
       {nowPlaying ? (
         <div>
+          <title>{`${nowPlaying.now_playing.song.text} | おんがく`}</title>
             <ProgressBar currentTime={calculateCurrentTime(nowPlaying.now_playing.played_at, nowPlaying.now_playing.duration)} totalDuration={nowPlaying.now_playing.duration} />
             <div className='text-ctp-text inline-flex'>
                 <p className='inline-flex' title='Listeners'><Icons.person className='mt-1.5'/> {nowPlaying.listeners.current}</p>

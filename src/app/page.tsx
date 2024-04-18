@@ -15,7 +15,6 @@ export default function Home() {
   
     return (
         <main>
-            <link rel="shortcut icon" href="/favicon.png" type="image/x-png" />
             {isClient ? (
                 <div className="ctp-mocha relative h-screen bg-ctp-mantle">
                     <Navbar />
