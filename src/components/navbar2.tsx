@@ -34,6 +34,11 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
+                    <Link href="/songs" prefetch={false}>
+                        <div className="text-ctp-text cursor-pointer hover:underline hover:underline-offset-8">Songs</div>
+                    </Link>
+                </li>
+                <li>
                     <Link href="/about" prefetch={false}>
                         <div className="text-ctp-text cursor-pointer hover:underline hover:underline-offset-8">About</div>
                     </Link>
