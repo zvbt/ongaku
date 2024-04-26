@@ -21,7 +21,7 @@ When the playlist are updated?
 ##
 <div align="center">
 <h3>Aviable on PreMiD</h3>
-<a target="_blank" href="https://discord.premid.app/">
+<a target="_blank" href="https://premid.app/store/presences/Ongaku">
         <img  src="https://avatars3.githubusercontent.com/u/46326568?s=400&amp;u=15e4a4988014780288d30ffb969fd1569fec23e6&amp;v=4" height="32px" draggable="false">
 </a>
 </div>
