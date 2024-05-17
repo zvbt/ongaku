@@ -44,6 +44,11 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
+                    <Link href="/status" prefetch={false} target='_blank'>
+                        <div className="text-ctp-text cursor-pointer hover:underline hover:underline-offset-8">Status</div>
+                    </Link>
+                </li>
+                <li>
                     <div className="cursor-pointer" onClick={darkmode}><Icons.moon className='fill-current text-ctp-text' /></div>
                 </li>
             </ul>
