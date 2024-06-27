@@ -24,7 +24,7 @@ export default function Page() {
                         <div className="bg-ctp-crust bg-opacity-90 py-5 px-10 w-[85%] rounded-xl my-2" id="bar">
                             <div className="text-ctp-text ">
                                 <p>Hello i'm Cyadine, and I build this website to explore Next.js. I've been wanting to create a project like this for a few months now!</p>
-                                <p>This is a non-profit project dedicated to helping you discover amazing K-Pop and J-Pop music! If you have any concerns about a song, please don't hesitate to email me at <a href="mailto:cyadine@skiff.com" className="text-ctp-mauve">cyadine@skiff.com</a> for quick removal.</p>
+                                <p>This is a non-profit project dedicated to helping you discover amazing K-Pop and J-Pop music! If you have any concerns about a song, please don't hesitate to email me at <a href="mailto:cyadine@pm.me" className="text-ctp-mauve">cyadine@pm.me</a> for quick removal.</p>
                             </div>
                         </div>
                         <h1 className='text-ctp-text font-bold text-5xl pt-10'>Q&A</h1>
