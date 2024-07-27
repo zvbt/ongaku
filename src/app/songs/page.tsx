@@ -12,7 +12,7 @@ export default function Page() {
         try {
             setIsFetching(true);
 
-            const apiKey = 'ada2a649ed060c30:6b0c71120670993dac73b4406d500194';
+            const apiKey = process.env.NEXT_PUBLIC_API_KEY;
             let headers: HeadersInit = {};
             if (apiKey) {
                 headers = {
