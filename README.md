@@ -20,8 +20,12 @@ When the playlist are updated?
 
 ##
 <div align="center">
-<h3>Aviable on PreMiD</h3>
+<h3>Aviable on multiple platforms</h3>
 <a target="_blank" href="https://premid.app/store/presences/Ongaku">
-        <img  src="https://avatars3.githubusercontent.com/u/46326568?s=400&amp;u=15e4a4988014780288d30ffb969fd1569fec23e6&amp;v=4" height="32px" draggable="false">
+<img  src="https://avatars3.githubusercontent.com/u/46326568?s=400&amp;u=15e4a4988014780288d30ffb969fd1569fec23e6&amp;v=4" height="64px" draggable="false">
 </a>
+<a target="_blank" href="https://discord.com/oauth2/authorize?client_id=1271103628127506522&permissions=2184203264&integration_type=0&scope=bot">
+<img  src="https://r2.e-z.host/7ed0180f-b228-49a7-be1e-0183c1938777/wj4ahk4r.jpg" height="64px" draggable="false">
+</a>
+
 </div>
