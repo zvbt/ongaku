@@ -23,7 +23,7 @@ export default function page() {
                     <div className="flex flex-col items-center justify-center absolute top-0 left-0 w-full h-full z-10">
                         <div className="bg-ctp-crust bg-opacity-90 py-5 px-10 w-[85%] rounded-xl" id="bar">
                             <div className="">
-                                <Player src="https://stream2.zvbt.space/radio.mp3" />
+                                <Player src="https://ongaku-api.zvbt.space/listen/ongaku-jpop/radio.mp3" />
                             </div>
                             <StatsComponent />
                         </div>
